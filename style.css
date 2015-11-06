@@ -1,0 +1,21 @@
+svg {
+    overflow: hidden;
+}
+.node rect {
+    stroke: #333;
+    stroke-width: 2.5px;
+    fill: #3879D9;
+}
+.edgeLabel rect {
+    fill: #29ABE2;
+    opacity: 0.5;
+}
+.edgePath {
+    stroke: #333;
+    stroke-width: 1.5px;
+    fill: lightgray;
+}
+text{
+    font-family: "Georgia", "Arial", "Helvetica", sans-serif;
+    font-size: 18px;
+}
