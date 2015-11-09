@@ -5,27 +5,27 @@
       <script src="http://d3js.org/d3.v3.min.js" ></script>
       <script src="dagre-d3.js" ></script>
       <script src="ReactiveRender.js"></script>
+      <script src="function.js"></script>
       <link rel="stylesheet" href="style.css" >
     <body>
         <svg width=650 height=680>
     <g transform="translate(20,20)"/>
 </svg>
-      <script>         
-          var g = new dagreD3.Digraph();
-
-          g.addNode("firstNode" ,  {label: "T1"});
-          g.addNode("secondNode",  {label: "T2"});
-          g.addNode("thirdNode" ,  {label: "T3"});
-          g.addNode("fourthNode",  {label: "T4"});
-          g.addNode("fifthNode" ,  {label: "T5"});
-
-          g.addEdge(null, "firstNode", "secondNode", {label: "Edge 1"});
-          g.addEdge(null, "firstNode", "thirdNode", {label:  "Edge 2"});
-          g.addEdge(null, "secondNode", "fourthNode", {label: "Edge 3"});
-          g.addEdge(null, "thirdNode", "fifthNode", {label: "Edge 4"});
-
-          var renderer = new dagreD3.Renderer();
-          renderer.run(g, d3.select("svg g"));
+      <script>                   
+          var vert = [ 
+       { id: '1',   name:  'N1' },
+       { id: '2',   name:  'N2' },
+       { id: '3',   name:  'N3' },
+       { id: '4',   name:  'N4' },
+       { id: '5',   name:  'N5' },
+                    ];
+          var edges = [
+              {from:'1',   to: '2' },
+              {from:'1',   to: '3' },
+              {from:'2',   to: '4' },
+              {from:'3',   to: '5' },
+          ];
+          draw(vert,edges);
       </script>
     </body>
 </html>
